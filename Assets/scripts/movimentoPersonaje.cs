@@ -37,7 +37,7 @@ public class movimentoPersonaje : MonoBehaviour
             else {
             anim.SetBool("impulsing", false); 
             }
-        }
+        
 
         float horizontal = Input.GetAxis("Horizontal");
         transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, horizontal) * rotationSpeed * Time.deltaTime;
@@ -45,7 +45,14 @@ public class movimentoPersonaje : MonoBehaviour
             GameObject temp = Instantiate(bala, balita.transform.position, transform.rotation);
             Destroy(temp, 1.5f);
         }
-        }
+    }
+    
+    
+    
+    
+    
+    
+    }
     
 
     public void Muerte()
